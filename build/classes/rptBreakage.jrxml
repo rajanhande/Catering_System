@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d97b7df7-f4e9-4c86-ab8b-06fb23ce8781">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     breakage.`ID` AS breakage_ID,
+     breakage.`Item_Type` AS breakage_Item_Type,
+     breakage.`Item_Name` AS breakage_Item_Name,
+     breakage.`Price` AS breakage_Price,
+     breakage.`Brk_Quantity` AS breakage_Brk_Quantity,
+     breakage.`Brk_Price` AS breakage_Brk_Price
+FROM
+     `breakage` breakage]]>
+	</queryString>
+	<field name="breakage_ID" class="java.lang.Integer"/>
+	<field name="breakage_Item_Type" class="java.lang.String"/>
+	<field name="breakage_Item_Name" class="java.lang.String"/>
+	<field name="breakage_Price" class="java.lang.Double"/>
+	<field name="breakage_Brk_Quantity" class="java.lang.Integer"/>
+	<field name="breakage_Brk_Price" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="bcbe3de0-70bc-404d-99d3-d0be29931baf"/>
+			</line>
+			<line>
+				<reportElement x="0" y="44" width="555" height="1" uuid="dc25d646-7e40-474b-8ca1-c22309d962dd"/>
+			</line>
+			<staticText>
+				<reportElement x="229" y="1" width="147" height="36" uuid="2b72ff61-9635-416b-9c26-b25504b48dec"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Breakage Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="3" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="41" splitType="Stretch">
+			<line>
+				<reportElement x="1" y="36" width="554" height="1" uuid="11385cc9-013d-4268-8df4-9d429a85e051"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="0" width="39" height="20" uuid="8cc2a797-1f97-4645-baad-6635a00e7503"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="52" y="2" width="100" height="20" uuid="eadda6a2-919f-444d-a060-d34f46d4f7d3"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Iteam Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="2" width="100" height="20" uuid="a4f44055-d02b-4a91-89f3-7a5fed3f544c"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="307" y="2" width="69" height="20" uuid="90f7b6d5-d2b7-4ec1-a1b0-b0e396cf7c47"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="2" width="59" height="20" uuid="9d6963b6-0f67-49bf-8baa-23440c8b2440"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="465" y="2" width="90" height="20" uuid="c32c2cbb-6843-4c1c-9443-8d628c88b6f7"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Brk.Price]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="46" splitType="Stretch">
+			<line>
+				<reportElement x="1" y="45" width="554" height="1" uuid="df865dfe-7508-4169-ba63-a1d01e11acbe"/>
+			</line>
+			<textField>
+				<reportElement x="1" y="0" width="38" height="20" uuid="5dcfbe9c-5d2c-4569-a886-108036b47913"/>
+				<textFieldExpression><![CDATA[$F{breakage_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="52" y="0" width="100" height="20" uuid="5ad1c245-6ca4-44e6-8efc-0237a761141a"/>
+				<textFieldExpression><![CDATA[$F{breakage_Item_Type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="0" width="123" height="20" uuid="9b712e15-120f-41b1-8150-b29f7d8832f1"/>
+				<textFieldExpression><![CDATA[$F{breakage_Item_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="307" y="0" width="69" height="20" uuid="0e68b231-a356-4514-aa07-7cdd24792d93"/>
+				<textFieldExpression><![CDATA[$F{breakage_Price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="391" y="0" width="59" height="20" uuid="7d489aeb-1606-4e87-aab0-a46e156924d2"/>
+				<textFieldExpression><![CDATA[$F{breakage_Brk_Quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="465" y="0" width="90" height="20" uuid="9e7d5c58-86c9-43f3-bca1-c3568d7369c7"/>
+				<textFieldExpression><![CDATA[$F{breakage_Brk_Price}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="2" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="4" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

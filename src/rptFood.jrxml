@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="33baa36b-62d1-4b2f-8add-423fb374abe3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     add_food.`ID` AS add_food_ID,
+     add_food.`Item_Type` AS add_food_Item_Type,
+     add_food.`Item_Name` AS add_food_Item_Name,
+     add_food.`Price` AS add_food_Price
+FROM
+     `add_food` add_food]]>
+	</queryString>
+	<field name="add_food_ID" class="java.lang.Integer"/>
+	<field name="add_food_Item_Type" class="java.lang.String"/>
+	<field name="add_food_Item_Name" class="java.lang.String"/>
+	<field name="add_food_Price" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="ad97b824-9584-48d5-a17e-dfecbb12a4b2"/>
+			</line>
+			<line>
+				<reportElement x="0" y="48" width="555" height="2" uuid="59612f6d-bf88-45c9-82af-ee2d366e6af7"/>
+			</line>
+			<staticText>
+				<reportElement x="229" y="1" width="132" height="27" uuid="7618c59d-dd58-4554-938e-1e71ae88422a"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Food Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="1" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="51" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="50" width="555" height="1" uuid="b7929e99-5982-44df-b3be-a8ee8ed8dcac"/>
+			</line>
+			<staticText>
+				<reportElement x="20" y="2" width="100" height="20" uuid="3972ac48-7e64-4020-a74c-dace77b626ba"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="144" y="2" width="100" height="20" uuid="f835c715-ec01-4a7d-8ab5-8252c8d93fa7"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item_Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="285" y="2" width="100" height="20" uuid="e0428804-4f0c-4b56-bcb4-10a8bf561efc"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="436" y="2" width="100" height="20" uuid="e97a1e96-854d-4507-b117-98cad865cdb3"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Food Price]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="46" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="0" width="100" height="20" uuid="5688afe6-88d3-481c-beb0-aa7b007d3cf6"/>
+				<textFieldExpression><![CDATA[$F{add_food_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="144" y="0" width="125" height="20" uuid="de92438f-6884-435c-8467-164aacd76605"/>
+				<textFieldExpression><![CDATA[$F{add_food_Item_Type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="285" y="0" width="128" height="20" uuid="71f78fde-711c-415c-85d8-3667efb3d4ac"/>
+				<textFieldExpression><![CDATA[$F{add_food_Item_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="436" y="0" width="100" height="20" uuid="7bb17f72-1c1c-4447-a858-bbb6575b5abf"/>
+				<textFieldExpression><![CDATA[$F{add_food_Price}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="35" width="555" height="1" uuid="b7433bec-e900-4de3-b102-3d0c8c8841c9"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="9" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7835133e-188b-48d4-893b-368ba459d162">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     add_material.`ID` AS add_material_ID,
+     add_material.`Item_Type` AS add_material_Item_Type,
+     add_material.`Item_Name` AS add_material_Item_Name,
+     add_material.`Quantity` AS add_material_Quantity,
+     add_material.`Price` AS add_material_Price
+FROM
+     `add_material` add_material]]>
+	</queryString>
+	<field name="add_material_ID" class="java.lang.Integer"/>
+	<field name="add_material_Item_Type" class="java.lang.String"/>
+	<field name="add_material_Item_Name" class="java.lang.String"/>
+	<field name="add_material_Quantity" class="java.lang.Integer"/>
+	<field name="add_material_Price" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="7" width="555" height="1" uuid="285ed0cb-9ac7-4bda-bf5b-34565fc19fcc"/>
+			</line>
+			<line>
+				<reportElement x="0" y="44" width="555" height="1" uuid="9eeb2bfb-75c8-4b5a-99df-7009780f064d"/>
+			</line>
+			<staticText>
+				<reportElement x="236" y="8" width="126" height="32" uuid="b66e36cb-eebe-4e53-a310-ad8da258dfa1"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Material Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="4" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="39" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="34" width="555" height="1" uuid="7219cc26-3416-4f46-8010-1d250bcea62c"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="0" width="52" height="20" uuid="adb51ed4-7674-41dd-8a92-e1b8f196a445"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="2" width="100" height="20" uuid="097a27b5-e461-4627-8c27-0571e8a6fd4b"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Material Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="2" width="100" height="20" uuid="38359a3a-aa43-4836-b78a-55939f6847fd"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Material Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="2" width="74" height="20" uuid="cc090965-ebe6-4512-94af-4e683011c7c3"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="486" y="2" width="69" height="20" uuid="99143011-583d-4ea2-8675-7391a04b6f6e"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="43" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="37" width="555" height="1" uuid="80b0a33d-0e89-443d-b905-f47646a79a00"/>
+			</line>
+			<textField>
+				<reportElement x="10" y="0" width="52" height="20" uuid="4059b3e1-5244-41e4-94db-d79bc97f5060"/>
+				<textFieldExpression><![CDATA[$F{add_material_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="4" width="140" height="20" uuid="8dba9355-681f-4f15-9316-8797a7815f9c"/>
+				<textFieldExpression><![CDATA[$F{add_material_Item_Type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="238" y="4" width="143" height="20" uuid="4b38930a-abb2-4c3c-bce1-1b849a5d4f99"/>
+				<textFieldExpression><![CDATA[$F{add_material_Item_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="392" y="4" width="74" height="20" uuid="fb74eb6d-0440-4311-ba84-ed2aaf4eb21b"/>
+				<textFieldExpression><![CDATA[$F{add_material_Quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="486" y="4" width="69" height="20" uuid="cee772f8-1ff9-4850-9525-eb41cda64e42"/>
+				<textFieldExpression><![CDATA[$F{add_material_Price}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="4" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="7" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
